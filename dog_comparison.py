@@ -633,6 +633,15 @@ st.set_page_config(
     layout="wide"
 )
 
+# Streamlit 기본 footer, 메뉴 숨기기
+st.markdown("""
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("🐕 강아지 비교 대전")
 st.markdown("두 강아지 사진을 업로드하여 승자를 결정합니다!")
 
